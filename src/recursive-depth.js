@@ -23,19 +23,17 @@ class DepthCalculator {
 
         if (this.nestedArrDepth > this.arrDepth) {
           this.arrDepth = this.nestedArrDepth
-          if (i + 1 === arr.length)
-            this.nestedArrDepth = 1
+         
         }
         
         this.calculateDepth(arr[i])
       }
+      if (i + 1 === arr.length)
+      this.nestedArrDepth = 1
     }
     return this.arrDepth
   }
 }
-
-depthCalculator = new DepthCalculator()
-console.log(depthCalculator.calculateDepth([1, 2, 3, 4, [1, 2, [1, 2, [[[]]]]], 5, [1, [[[[[[]]]]]]]]))
 
 
 module.exports = {
