@@ -35,17 +35,17 @@ function getSeason(date) {
   
 }
 
-const fakeDate = {
-  toString() {
-      return Date.prototype.toString.call(new Date());
-  },
-  [Symbol.toStringTag]: 'Date'
-};
+// const fakeDate = {
+//   toString() {
+//       return Date.prototype.toString.call(new Date());
+//   },
+//   [Symbol.toStringTag]: 'Date'
+// };
 
-Object.setPrototypeOf(fakeDate, Object.getPrototypeOf(new Date()));
+// Object.setPrototypeOf(fakeDate, Object.getPrototypeOf(new Date()));
 
 
-getSeason(fakeDate)
+// getSeason(fakeDate)
 
 module.exports = {
   getSeason
